@@ -23,6 +23,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: var(--LightGrayishGlue);
 }
 main{
   display: grid;
@@ -33,7 +34,7 @@ main{
   "art4 art5 art5 art3";
   justify-content: center;
   gap: 2rem;
-  padding: 0 7rem;
+  padding: 0 14rem;
 }
 @media (max-width: 70rem) {
 
@@ -98,11 +99,11 @@ article{
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 2rem 4rem;
+  padding: 4rem;
   height: auto;
   gap: 1rem;
   border-radius: 10px;
-  box-shadow: 15px 15px 20px rgba(97, 97, 97, 0.555);;
+  box-shadow: 15px 15px 20px rgba(97, 97, 97, 0.247);;
 }
 
 article img{
