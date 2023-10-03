@@ -1,0 +1,118 @@
+
+:root{
+  font-size: 62.5%;
+  /* Primary */
+
+--moderateViolet: hsl(263, 55%, 52%);
+--Very-darkGrayishBlue: hsl(217, 19%, 35%);
+--veryDarkBlackishBlue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+  /* Neutral */
+
+--LightGray: hsl(0, 0%, 81%);
+--LightGrayishGlue: hsl(210, 46%, 95%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--LightGrayishGlue);
+}
+main{
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: 
+  "art1 art1 art2 art3"
+  "art4 art5 art5 art3";
+  gap: 3rem;
+  padding: 15rem 35rem;
+}
+@media (max-width: 70rem) {
+  main{
+  
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "art1"
+    "art2"
+    "art4"
+    "art5"
+    "art3";
+    padding: 0rem 00rem;
+  
+  
+  }
+  
+}
+main article:nth-child(1){
+  grid-area: art1;
+  background-color: var(--moderateViolet);
+  color: var(--White);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 450px 10px;
+  background-size: 12rem;
+}
+main article:nth-child(2){
+  grid-area: art2;
+  background-color: var(--Very-darkGrayishBlue);
+  color: var(--LightGrayishGlue);
+}
+main article:nth-child(3){
+  grid-area: art3;
+  background-color: var(--White);
+  color: var(--veryDarkBlackishBlue);
+}
+main article:nth-child(4){
+  grid-area: art4;
+  background-color: var(--White);
+  color: var(--Very-darkGrayishBlue);
+}
+main article:nth-child(5){
+  grid-area: art5;
+  background-color: var(--veryDarkBlackishBlue);
+  color: var(--LightGrayishGlue);
+}
+article{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem 4rem;
+  min-width: 25rem;
+  gap: 2rem;
+  border-radius: 10px;
+  box-shadow: 80px 80px 40px rgba(104, 104, 104, 0.075);;
+}
+
+article img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+article header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article h2{
+  opacity: 0.8;
+}
+article p{
+  font-weight: 500;
+  line-height: 2.5rem;
+  opacity: .7;
+  font-size: 1.3rem;
+}
+article header p{
+  opacity: .5;
+}
