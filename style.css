@@ -104,6 +104,7 @@ article{
   gap: 1rem;
   border-radius: 10px;
   box-shadow: 15px 15px 20px rgba(97, 97, 97, 0.247);;
+  
 }
 
 article img{
@@ -115,9 +116,7 @@ article header{
   justify-content: center;
   align-items: center;
 }
-article h2{
-  opacity: 0.8;
-}
+
 article p{
   font-weight: 500;
   opacity: .7;
