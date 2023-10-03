@@ -22,24 +22,24 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--LightGrayishGlue);
-  height: auto;
+  min-height: 100vh;
 }
 main{
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 45% 45%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: 
   "art1 art1 art2 art3"
   "art4 art5 art5 art3";
   justify-content: center;
   gap: 2rem;
-  padding: 2rem 10rem;
+  padding: 0 7rem;
 }
 @media (max-width: 70rem) {
+
   main{
     grid-template-rows: auto;
-    grid-template-columns: 100vw;
+    grid-template-columns: 100%;
     grid-template-areas: 
     "art1"
     "art2"
@@ -47,7 +47,7 @@ main{
     "art5"
     "art3";
     gap: 2rem;
-    padding: 0rem 0rem; 
+    padding: 2rem; 
   
   }
   
@@ -58,14 +58,24 @@ main article:nth-child(1){
   color: var(--White);
   background-image: url(/images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-position: 450px 10px;
+  background-position: 450px;
   background-size: 12rem;
+}
+@media (max-width: 70rem) {
+
+  main article:nth-child(1){
+    background-repeat: no-repeat;
+    background-position: 230px 10px;
+    background-size: 12rem;
+  }
+  
 }
 main article:nth-child(2){
   grid-area: art2;
   background-color: var(--Very-darkGrayishBlue);
   color: var(--LightGrayishGlue);
 }
+
 main article:nth-child(3){
   grid-area: art3;
   background-color: var(--White);
@@ -92,7 +102,7 @@ article{
   height: auto;
   gap: 1rem;
   border-radius: 10px;
-  box-shadow: 80px 80px 40px rgba(104, 104, 104, 0.075);;
+  box-shadow: 15px 15px 20px rgba(97, 97, 97, 0.555);;
 }
 
 article img{
@@ -114,4 +124,7 @@ article p{
 }
 article header p{
   opacity: .5;
+}
+article img{
+  width: 70px;
 }
